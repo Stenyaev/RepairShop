@@ -1,0 +1,8 @@
+<svg id="Shadows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <title>4Artboard 1</title>
+  <path d="M122,48H230a19,19,0,0,1,19,19V290a19,19,0,0,1-19,19H122a19,19,0,0,1-19-19V67A19,19,0,0,1,122,48Z" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <line x1="101" y1="243" x2="249" y2="243" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <line x1="101" y1="91" x2="249" y2="91" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <circle cx="176" cy="69" r="4" style="fill: #7f7f7f"/>
+  <circle cx="178" cy="277" r="13" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+</svg>

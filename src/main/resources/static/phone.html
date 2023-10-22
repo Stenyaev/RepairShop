@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Телефоны</title>
+    <link rel="stylesheet" type="text/css" href="phone/phoneStyle.css" />
+</head>
+<body>
+<header>
+
+    <h1>Ремонтная мастерская</h1>
+
+</header>
+
+<nav>
+    <a href="mainpage.html">Главная</a>
+    <a href="services.html">Услуги</a>
+    <a href="aboutUs.html">О нас</a>
+    <a href="contacts.html">Контакты</a>
+</nav>
+
+<div class="box">
+
+    <form id="phone-form">
+
+        <h2>Телефоны</h2>
+        <p>Выберите производителя и опишите проблему</p>
+
+        <label for="producer">Производитель:</label>
+        <input type="text" id="producer" required>
+
+        <label for="defectDescr">Описание дефекта:</label>
+        <input type="text" id="defectDescr" required>
+
+        <label for="date">Дата приезда мастера:</label>
+        <input type="text" id="date" required>
+
+        <label for="time">Время приезда мастера:</label>
+        <input type="text" id="time" required>
+
+        <label for="address">Ваш адрес:</label>
+        <input type="text" id="address" required>
+
+        <button type="submit" id="appointment-button">Оставить заявку</button>
+    </form>
+
+</div>
+
+<footer>
+
+    <p>Copyright &copy;2023 Ремонтная мастерская</p>
+
+</footer>
+
+<script src="phone/phoneAction.js"></script>
+</body>
+</html>

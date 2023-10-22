@@ -1,0 +1,7 @@
+<svg id="Shadows" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
+  <title>2Artboard 1</title>
+  <path d="M49,50H312a25,25,0,0,1,25,25V228a25,25,0,0,1-25,25H49a25,25,0,0,1-25-25V75A25,25,0,0,1,49,50Z" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <circle cx="180" cy="78" r="5" style="fill: #7f7f7f"/>
+  <polyline points="224 252 224 305 137 305 137 252" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+  <line x1="91" y1="305" x2="271" y2="305" style="fill: none;stroke: #7f7f7f;stroke-miterlimit: 10;stroke-width: 8px"/>
+</svg>
