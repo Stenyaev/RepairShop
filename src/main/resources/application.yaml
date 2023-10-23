@@ -1,0 +1,18 @@
+server:
+  port: 8109
+  servlet:
+    context-path: /demo
+jwt:
+  secret: 984hg439gh0439rthr0429uruj2309yh937gc763fe87t3f89723gf
+  lifetime: 30m
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/masterskaya
+    username: root
+    password: Steniaev007
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
