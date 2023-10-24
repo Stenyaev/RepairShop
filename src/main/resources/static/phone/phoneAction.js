@@ -15,14 +15,14 @@ form.addEventListener('submit', async (event) => {
     const address = addressInput.value;
 
     try {
-        const response = await fetch('/appointment', {
+        const response = await fetch('http://localhost:8080/demo/appointments', {
             method: 'POST',
             body: JSON.stringify({producer, defectDescr, date, time, address}),
             headers: {'Content-Type': 'application/json'}
         });
 
         if (response.ok) {
-            window.location.href = "/mainpage";
+            window.location.href = "/demo/mainpage";
         } else {
             const error = await response.json();
             const errorMessage = error.message || 'Произошла ошибка';

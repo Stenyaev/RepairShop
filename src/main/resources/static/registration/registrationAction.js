@@ -16,10 +16,9 @@ form.addEventListener('submit', async (event) => {
             body: JSON.stringify({username, email, password}),
             headers: {'Content-Type': 'application/json'}
         });
-
-        if (response.ok) {
         // через гет
-            window.location.href = "/mainpage";
+        if (response.ok) {
+            window.location.href = "/demo/mainpage";
         } else {
             const error = await response.json();
             const errorMessage = error.message || 'Произошла ошибка';
