@@ -11,13 +11,14 @@ form.addEventListener('submit', async (event) => {
     const password = passwordInput.value;
 
     try {
-        const response = await fetch('/person', {
+        const response = await fetch('http://localhost:8080/demo/users', {
             method: 'POST',
             body: JSON.stringify({username, email, password}),
             headers: {'Content-Type': 'application/json'}
         });
 
         if (response.ok) {
+        // через гет
             window.location.href = "/mainpage";
         } else {
             const error = await response.json();

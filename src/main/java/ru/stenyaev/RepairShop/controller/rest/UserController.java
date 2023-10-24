@@ -11,7 +11,7 @@ import ru.stenyaev.RepairShop.entity.User;
 import ru.stenyaev.RepairShop.service.UserService;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserController {
 
     @Autowired

@@ -9,7 +9,7 @@ form.addEventListener('submit', async (event) => {
     const password = passwordInput.value;
 
     try {
-        const response = await fetch('/person', {
+        const response = await fetch('/users', {
             method: 'POST',
             body: JSON.stringify({username, password}),
             headers: {'Content-Type': 'application/json'}

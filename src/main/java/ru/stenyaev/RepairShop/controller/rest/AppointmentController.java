@@ -12,7 +12,7 @@ import ru.stenyaev.RepairShop.entity.Appointment;
 import ru.stenyaev.RepairShop.service.AppointmentService;
 
 @RestController
-@RequestMapping("/appointment")
+@RequestMapping("/appointments")
 public class AppointmentController {
 
     @Autowired

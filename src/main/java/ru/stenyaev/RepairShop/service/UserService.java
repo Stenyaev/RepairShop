@@ -55,7 +55,7 @@ public class UserService implements UserDetailsService {
 //        return userRepo.save(user);
 //    }
 
-    public void createNewUser(User user) throws UserAlreadyExistsException, RoleNotFoundException {
+    public User createNewUser(User user) throws UserAlreadyExistsException, RoleNotFoundException {
         if (findByUsername(user.getUsername()).isPresent()) {
             throw new UserAlreadyExistsException(
                     String.format(
@@ -73,6 +73,6 @@ public class UserService implements UserDetailsService {
                         ))
         ));
 
-        userRepo.save(user);
+        return userRepo.save(user);
     }
 }
