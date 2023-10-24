@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Авторизация пользователя</title>
+    <link rel="stylesheet" href="authorization/authorizationStyle.css" />
+</head>
+<body>
+
+<header>
+
+    <h1>Ремонтная мастерская</h1>
+    
+</header>
+
+<nav>
+    <a href="authorization.html">Авторизация</a>
+    <a href="registration.html">Регистрация</a>
+</nav>
+
+<div class="box">
+
+    <form id="authorization-form">
+        <h2>Авторизация</h2>
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        <button type="submit" id="authorization-button">Войти</button>
+    </form>
+
+</div>
+
+<footer>
+
+    <p>Copyright &copy;2023 Ремонтная мастерская</p>
+
+</footer>
+
+<script src="authorization/authorizationAction.js"></script>
+</body>
+</html>
