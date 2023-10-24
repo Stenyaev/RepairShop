@@ -18,6 +18,9 @@ public class AppointmentController {
     @Autowired
     private AppointmentService appointmentService;
 
+
+    // Исправить
+
     @PostMapping
     public ResponseEntity save(@RequestBody Appointment appointment) {
 

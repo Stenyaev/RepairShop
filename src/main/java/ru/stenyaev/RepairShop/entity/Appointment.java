@@ -25,7 +25,7 @@ public class Appointment {
     private String address;
 
     @ManyToOne
-    @JoinColumn(name = "person_id")
-    private Person person;
+    @JoinColumn(name = "user_id")
+    private User user;
 
 }

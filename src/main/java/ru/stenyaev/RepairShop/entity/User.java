@@ -14,8 +14,8 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "persons")
-public class Person {
+@Table(name = "users")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,13 +29,13 @@ public class Person {
     @Column(nullable = false)
     private String password;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "person")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Appointment> appointments;
 
     @ManyToMany
     @JoinTable(
-            name = "persons_roles",
-            joinColumns = @JoinColumn(name = "person_id"),
+            name = "users_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Collection<Role> roles;
