@@ -21,7 +21,6 @@ public class UserController {
     public ResponseEntity registration(@RequestBody User user) {
 
         try {
-//            userService.registration(user);
             userService.createNewUser(user);
             return new ResponseEntity(HttpStatus.OK);
         } catch (Exception e) {

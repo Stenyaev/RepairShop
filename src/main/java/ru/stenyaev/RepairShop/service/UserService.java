@@ -47,14 +47,6 @@ public class UserService implements UserDetailsService {
         );
     }
 
-//    public User registration(User user) throws Exception {
-//        if (userRepo.findByUsername(user.getUsername()) != null)
-//            throw new Exception("такой пользователь уже существует");
-////        user.setRoles(List.of(role));
-////
-//        return userRepo.save(user);
-//    }
-
     public User createNewUser(User user) throws UserAlreadyExistsException, RoleNotFoundException {
         if (findByUsername(user.getUsername()).isPresent()) {
             throw new UserAlreadyExistsException(
