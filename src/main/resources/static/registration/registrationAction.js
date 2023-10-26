@@ -18,7 +18,7 @@ form.addEventListener('submit', async (event) => {
         });
         // через гет
         if (response.ok) {
-            window.location.href = "/demo/mainpage";
+            window.location.href = "/demo/authorization";
         } else {
             const error = await response.json();
             const errorMessage = error.message || 'Произошла ошибка';
