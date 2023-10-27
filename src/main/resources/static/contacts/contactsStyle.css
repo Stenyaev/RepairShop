@@ -56,9 +56,16 @@ img {
 }
 
 footer {
+    position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+
     background-color: #65755f;
     color: #fff;
     padding: 20px;
+
+    text-align: center;
 }
 
 h1 {

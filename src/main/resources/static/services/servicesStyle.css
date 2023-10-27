@@ -69,11 +69,13 @@ footer {
     background-color: #65755f;
     color: #f3f3f3;
     padding: 20px;
+
+    text-align: center;
 }
 
 h1 {
     font-size: 32 px;
-    margin: 0;
+    margin: auto;
 }
 
 h2 {

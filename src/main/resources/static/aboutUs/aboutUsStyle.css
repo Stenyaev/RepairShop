@@ -52,13 +52,15 @@ img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: auto;
     padding: 20px;
-    width: 100%;
+    width: 60%;
 }
 
 footer {
     background-color: #65755f;
     color: #fff;
     padding: 20px;
+
+    text-align: center;
 }
 
 h1 {
@@ -76,10 +78,44 @@ p {
     padding: 10px 0;
 }
 
-.box {
+.box1 {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 20px;
+}
+.box2 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+}
+.box3 {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+    padding: 20px;
+
+
+}
+
+.text3 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+    /* margin: 30px; */
+    padding: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.image {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
