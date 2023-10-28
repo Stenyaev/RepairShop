@@ -64,14 +64,14 @@ label {
 
 }
 
-input[type="text"] {
+input, select {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5 px;
+    border-radius: 5px;
     box-sizing: border-box;
-    text-align: center;
+
     margin-top: 0px;  }
 
 textarea {
@@ -80,9 +80,9 @@ textarea {
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5 px;
+    border-radius: 5px;
     box-sizing: border-box;
-    text-align: center;
+
     margin-top: 0px;  
 }
 

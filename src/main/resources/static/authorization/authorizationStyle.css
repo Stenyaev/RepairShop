@@ -37,8 +37,8 @@ nav a {
 form {
     background-color: white;
     width: 500px;
-    padding: 40px;
-    margin: 50px auto;
+    padding: 60px;
+    margin: 10px auto 50px ;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
 }
@@ -58,13 +58,13 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"]
-input[type="password"] {
+
+input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 7px;
     box-sizing: border-box;
 }
 
@@ -83,7 +83,7 @@ button[type="submit"]:hover {
 }
 
 footer {
-    position: absolute;
+    position:absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;

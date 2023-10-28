@@ -16,8 +16,8 @@ public class AppointmentService {
     private UserRepo userRepo;
 
     public Appointment saveAppointment(Appointment appointment) {
-        var user = userRepo.findByUsername("");
-        appointment.setUser(user.get());
+//        var user = userRepo.findByUsername("");
+//        appointment.setUser(user.get());
 
         return appointmentRepo.save(appointment);
     }
