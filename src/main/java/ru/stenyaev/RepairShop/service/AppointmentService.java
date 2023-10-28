@@ -15,7 +15,7 @@ public class AppointmentService {
     @Autowired
     private UserRepo userRepo;
 
-    public Appointment save(Appointment appointment) {
+    public Appointment saveAppointment(Appointment appointment) {
         var user = userRepo.findByUsername("");
         appointment.setUser(user.get());
 

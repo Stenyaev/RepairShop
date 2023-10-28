@@ -25,7 +25,7 @@ public class AppointmentController {
     public ResponseEntity save(@RequestBody Appointment appointment) {
 
         try {
-            appointmentService.save(appointment);
+            appointmentService.saveAppointment(appointment);
             return new ResponseEntity(HttpStatus.OK);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());
