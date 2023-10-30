@@ -1,0 +1,13 @@
+package ru.stenyaev.RepairShop.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class TabletController {
+
+    @GetMapping("/tablet")
+    public String showAuthorizationPage() {
+        return "tablet.html";
+    }
+}
