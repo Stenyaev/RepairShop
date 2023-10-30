@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <title>Телефоны</title>
+    <link rel="stylesheet" type="text/css" href="computer/computerStyle.css" />
+</head>
+<body>
+<header>
+
+    <h1>Ремонтная мастерская</h1>
+
+</header>
+
+<nav>
+    <a href="/demo/mainpage">Главная</a>
+    <a href="/demo/services">Услуги</a>
+    <a href="/demo/aboutUs">О нас</a>
+    <a href="/demo/contacts">Контакты</a>
+</nav>
+
+<div class="box">
+
+    <form id="computer-form">
+
+        <h2>Компьютеры</h2>
+        <p>Выберите производителя и опишите проблему</p>
+
+        <label for="producer">Производитель:</label>
+        <select id="producer" required>
+            <option value="">--Выберите производителя устройства--</option>
+            <option value="Apple">Apple</option>
+            <option value="ASUS">ASUS</option>
+            <option value="Acer">Acer</option>
+            <option value="MSI">MSI</option>
+            <option value="Lenovo">Lenovo</option>
+            <option value="HP">HP</option>
+        </select>
+
+        <label for="defectDescr">Описание дефекта:</label>
+        <textarea id="defectDescr" required></textarea>
+
+        <label for="date">Дата приезда мастера:</label>
+        <input type="date" id="date" name="date" min="2023-01-01" max="2030-12-31" />
+
+        <label for="time">Время приезда мастера:</label>
+        <input type="time" id="time" min="09:00" max="18:00" required>
+
+        <label for="address">Ваш адрес:</label>
+        <input type="text" id="address" required>
+
+        <button type="submit" id="appointment-button">Оставить заявку</button>
+    </form>
+
+</div>
+
+<footer>
+
+    <p>Copyright &copy;2023 Ремонтная мастерская</p>
+
+</footer>
+
+<script src="computer/computerAction.js"></script>
+</body>
+</html>
