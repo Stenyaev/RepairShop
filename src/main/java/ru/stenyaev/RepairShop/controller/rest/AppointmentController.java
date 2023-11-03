@@ -22,10 +22,10 @@ public class AppointmentController {
     // Исправить
 
     @PostMapping
-    public ResponseEntity save(@RequestBody Appointment appointment) {
+    public ResponseEntity save(@RequestBody Appointment appointment, String token) {
 
         try {
-            appointmentService.saveAppointment(appointment);
+            appointmentService.saveAppointment(appointment, token);
             return new ResponseEntity(HttpStatus.OK);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body(e.getMessage());

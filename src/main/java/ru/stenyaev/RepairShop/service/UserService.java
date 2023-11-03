@@ -5,6 +5,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.stenyaev.RepairShop.entity.User;
 import ru.stenyaev.RepairShop.exceptions.RoleNotFoundException;
@@ -25,6 +27,7 @@ public class UserService implements UserDetailsService {
     @Autowired
     private RoleRepo roleRepo;
 
+
     public Optional<User> findByUsername(String username) {
         return userRepo.findByUsername(username);
     }
@@ -37,6 +40,7 @@ public class UserService implements UserDetailsService {
                         String.format(
                                 ErrorMessageType.USER_NOT_FOUND_SF.getText(), username)
                 ));
+
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(),
                 user.getPassword(),

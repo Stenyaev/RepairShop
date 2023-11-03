@@ -14,15 +14,34 @@ form.addEventListener('submit', async (event) => {
     const time = timeInput.value;
     const address = addressInput.value;
 
+    const data = {
+        producer,
+        defectDescr,
+        date,
+        time,
+        address
+    }
+
+// Лютый костыль, не уверен, что достает нужное
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    const token = getCookie('jwtToken');
+
     try {
         const response = await fetch('http://localhost:8080/demo/appointments', {
             method: 'POST',
-            body: JSON.stringify({producer, defectDescr, date, time, address, }),//username
+            body: JSON.stringify({data, token}),// Тут возможно надо иначе указывать данные, не знаю
             headers: {'Content-Type': 'application/json'}
         });
 
         if (response.ok) {
             window.location.href = "/demo/successful";
+
         } else {
             const error = await response.json();
             const errorMessage = error.message || 'Произошла ошибка';
