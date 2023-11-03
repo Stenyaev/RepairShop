@@ -23,19 +23,35 @@ form.addEventListener('submit', async (event) => {
     }
 
 // Лютый костыль, не уверен, что достает нужное
-    function getCookie(name) {
-        let matches = document.cookie.match(new RegExp(
-        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        ));
-    return matches ? decodeURIComponent(matches[1]) : undefined;
-    }
+//    function getCookie(name) {
+//        let matches = document.cookie.match(new RegExp(
+//        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+//        ));
+//    return matches ? decodeURIComponent(matches[1]) : undefined;
+//    }
+//
+//    const token = getCookie('jwtToken');
 
-    const token = getCookie('jwtToken');
+// Второй костыль
+//    const cookie = document.cookie;
+//    let jwtToken = null;
+//    for (const cook of cookie.split(";")) {
+//        const [name, value] = cook.split("=");
+//        if (name === "jwtToken") {
+//            jwtToken = value;
+//            break;
+//        }
+//    }
+//    const token = jwtToken;
+//    console.log(jwtToken);
+
+// Третий костыль
+const jwtToken = document.cookie.split(';').find(cookie => cookie.trim().startsWith('jwtToken=')).split('=');
 
     try {
         const response = await fetch('http://localhost:8080/demo/appointments', {
             method: 'POST',
-            body: JSON.stringify({data, token}),// Тут возможно надо иначе указывать данные, не знаю
+            body: JSON.stringify({data, jwtToken}),// Тут возможно надо иначе указывать данные, не знаю
             headers: {'Content-Type': 'application/json'}
         });
 
