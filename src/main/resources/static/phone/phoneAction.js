@@ -46,7 +46,7 @@ form.addEventListener('submit', async (event) => {
 //    console.log(jwtToken);
 
 // Третий костыль
-const jwtToken = document.cookie.split(';').find(cookie => cookie.trim().startsWith('jwtToken=')).split('=');
+    const jwtToken = document.cookie.split(';').find(cookie => cookie.trim().startsWith('jwtToken=')).split('=');
 
     try {
         const response = await fetch('http://localhost:8080/demo/appointments', {
