@@ -26,13 +26,16 @@ public class AppointmentService {
     @Autowired
     private AuthenticationManager authenticationManager;
 
-    public Appointment saveAppointment(Appointment appointment, String token) {
-        String username = jwtTokenUtils.getUsername(token);
-        Optional<User> user;
-        user = userRepo.findByUsername(username);
+//    public Appointment saveAppointment(Appointment appointment, String token) {
+//        String username = jwtTokenUtils.getUsername(token);
+//        Optional<User> user = userRepo.findByUsername(username);
+//
+//        appointment.setUser(user.get());
+//
+//        return appointmentRepo.save(appointment);
+//    }
 
-        appointment.setUser(user.get());
-
+    public Appointment saveAppointment(Appointment appointment) {
         return appointmentRepo.save(appointment);
     }
 }
